@@ -1,3 +1,24 @@
 h1{
-    color:red;
+    text-align: center;  
+    font-weight: bold;
+    font-size: 56px;
+}
+
+h3{
+    text-align: center;
+    font-size: 48px;
+}
+
+.pictures{
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.picture{
+    /* width:25%; */
+    height: 200px;
+    aspect-ratio: 1/1;  /* what is this meaning? */
+    border: 3px solid black;
+    margin: 10px;
 }
