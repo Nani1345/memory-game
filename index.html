@@ -10,27 +10,27 @@
 <body>
     <h1>Memorize the position of the pictures</h1>
     <h3>Where is this picture?</h3>
-    
+
     <div class="gameIntrocution">
         <p><b>Introduction:</b></p>
         <p>This game is designed to test and improve your memory and attention skills. </p>
-        <p><b>>Game Rules:</b></p>
+        <p><b>Game Rules:</b></p>
         <p>Eight images will appear on the screen at the start of each round. These images will be visible for 10 seconds before disappearing.
         After the images disappear, a single image will appear in the upper right corner of the screen. You must click the correct location where this image was initially displayed within 8 seconds.
         Each correct choice earns you one point. Incorrect choices or no selection at all will result in zero points. </p>
-        <button>Start</button>
+        <button id="startButton">Start</button>
     </div>
     
     
-    <div class="pictures">
-        <div class="picture" id="0"></div>
-        <div class="picture" id="1"></div>
-        <div class="picture" id="2"></div>
-        <div class="picture" id="3"></div>
-        <div class="picture" id="4"></div>
-        <div class="picture" id="5"></div>
-        <div class="picture" id="6"></div>
-        <div class="picture" id="7"></div>
+    <div id="imagesContainer" style = 'visibility: hidden;'>
+        <div class="image" id="0"></div>
+        <div class="image" id="1"></div>
+        <div class="image" id="2"></div>
+        <div class="image" id="3"></div>
+        <div class="image" id="4"></div>
+        <div class="image" id="5"></div>
+        <div class="image" id="6"></div>
+        <div class="image" id="7"></div>
     </div>
 </body>
 </html>
