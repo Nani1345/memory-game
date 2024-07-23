@@ -1,7 +1,7 @@
 let imageComputerChoice  
 let imagePlayerChoice 
 let boards = []
-let timeleft = 10
+let timeleft = 7
 let score = 0
 
 
@@ -26,12 +26,14 @@ const boxEls = document.querySelectorAll('.imagebox')
 const countdownEl = document.getElementById('countdown')
 const scoreEl = document.getElementById('score')
 const randomImgEl = document.getElementById('randomImg')
+const scoreEls = document.getElementById('score')
 
 const img = document.createElement('img')
 
 function render(){
     boards = []
     updateImageBox()
+    displayCountdown()
 }
 
 
@@ -56,13 +58,13 @@ function updateImageBox(){
         //You then set the src attribute and append the same img element to multiple boxEls, 
         //which will overwrite the src attribute in each iteration, resulting in only the last image 
         //being shown in all boxes.
-        
+
         img.src = board
         boxEls[index].appendChild(img)
     })
 
     // images disappear 10s later
-    countDown()
+    displayCountdown()
     
 }
 
@@ -72,7 +74,7 @@ function updateImageBox(){
 
 // }
 
-function countDown(){
+function displayCountdown(){
    let timerInterval = setInterval(tick, 1000)
     function tick(){
         timeleft -= 1
@@ -87,9 +89,42 @@ function countDown(){
 
 function randomImgShow(){
     let boxIdx = Math.floor(Math.random() * 8)
-    // randomImgEl.src = boars[boxIdx]   boxEls[index].src = board is invalid because the elements in the boxEls array are DOM elements (such as div), and these elements do not have a src attribute. The src attribute is specific to img elements, used to specify the image source. The correct approach is to create an img element, set its src attribute, and then append this img element to one of the elements in the boxEls array.
-    img.src = boards[boxIdx]
+    // randomImgEl.src = boars[boxIdx]   boxEls[index].src = board is invalid 
+    //because the elements in the boxEls array are DOM elements (such as div), 
+    //and these elements do not have a src attribute. The src attribute is specific 
+    //to img elements, used to specify the image source. The correct approach is 
+    //to create an img element, set its src attribute, and then append t
+    //his img element to one of the elements in the boxEls array.
+    
+    let imageComputerChoice =  boards[boxIdx] 
+    img.src = imageComputerChoice
     randomImgEl.appendChild(img)
+    console.log(imageComputerChoice)
+}
+
+function handleClick(evt){
+    const clickBoxIdx = parseInt(evt.currentTarget.id)
+    console.log(clickBoxIdx)
+    // difference between vt.currentTarget.id and vt.target.id
+    if(boards[clickBoxIdx] === imageComputerChoice){
+        score += 1 
+        console.log('得分:', score);
+        
+    }
+//Without the line boxEls.forEach(box => box.innerHTML = '');, 
+//the images would keep appearing repeatedly with each click. 
+//This is because, on each click, you add a new img element to 
+//each element in boxEls without clearing the previous images.
+// This results in the old images being overlaid by the new images.
+    boxEls.forEach(box => box.innerHTML = '');
+    // scoreEls.textContent = score  
+    boards.forEach((board,index) => {
+        const img = document.createElement('img')
+        img.src = board
+        boxEls[index].appendChild(img)
+    })
+
+
 }
 
 
@@ -97,4 +132,8 @@ startBtnEl.addEventListener('click', (event) => {
     gamInstruction.style.visibility = 'hidden'
     imageEl.style.visibility = 'visible'
     updateImageBox()
+})
+
+boxEls.forEach((boxEl) => {
+    boxEl.addEventListener('click', handleClick)
 })

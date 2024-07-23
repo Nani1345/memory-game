@@ -28,3 +28,7 @@ p {
     border: 3px solid black;
     margin: 10px;
 }
+
+.randomImg {
+    background-color: aquamarine;
+}
