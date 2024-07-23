@@ -22,7 +22,8 @@ p {
 
 .imagebox{
     /* width:25%; */
-    height: 200px;
+    width:500px;
+    height: 400px;
     aspect-ratio: 1/1;  /* what is this meaning? */
     border: 3px solid black;
     margin: 10px;
