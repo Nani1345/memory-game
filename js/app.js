@@ -1,6 +1,7 @@
 let imageComputerChoice  
 let imagePlayerChoice 
 let boards = []
+let timeleft = 10
 
 
 const imagesLab = ['../images/1.jpg', '../images/2.jpg', '../images/3.jpg', '../images/4.jpg', '../images/5.jpg', 
@@ -21,6 +22,7 @@ const startBtnEl = document.getElementById('startButton')
 const gamInstruction = document.querySelector('.gameIntrocution')
 const imageEl = document.getElementById('imagesContainer')
 const boxEls = document.querySelectorAll('.imagebox')
+const countdownEl = document.getElementById('countdown')
 
 
 function updateImageBox(){
@@ -41,6 +43,14 @@ function updateImageBox(){
     })
 }
 
+let timerInterval = setInterval(tick, 1000)
+function tick(){
+    timeleft -= 1
+    countdownEl.textContent = timeleft
+    if(timeleft === 0){
+        clearInterval(timerInterval)
+    }
+}
 
 
 startBtnEl.addEventListener('click', (event) => {
