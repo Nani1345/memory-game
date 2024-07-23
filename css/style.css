@@ -20,7 +20,7 @@ p {
     flex-wrap: wrap;
 }
 
-.sqr{
+.imagebox{
     /* width:25%; */
     height: 200px;
     aspect-ratio: 1/1;  /* what is this meaning? */
