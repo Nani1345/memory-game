@@ -2,6 +2,7 @@ let imageComputerChoice
 let imagePlayerChoice 
 let boards = []
 let timeleft = 10
+let score = 0
 
 
 const imagesLab = ['../images/1.jpg', '../images/2.jpg', '../images/3.jpg', '../images/4.jpg', '../images/5.jpg', 
@@ -23,8 +24,18 @@ const gamInstruction = document.querySelector('.gameIntrocution')
 const imageEl = document.getElementById('imagesContainer')
 const boxEls = document.querySelectorAll('.imagebox')
 const countdownEl = document.getElementById('countdown')
+const scoreEl = document.getElementById('score')
+const randomImgEl = document.getElementById('randomImg')
+
+const img = document.createElement('img')
+
+function render(){
+    boards = []
+    updateImageBox()
+}
 
 
+// this function there is no return, why can execute auto??????
 function updateImageBox(){
    
     boxEls.forEach(box => box.innerHTML = '')
@@ -38,18 +49,47 @@ function updateImageBox(){
     // append new images to the boxes
     boards.forEach((board,index) => {
         const img = document.createElement('img')
+        //Inside the loop: document.createElement('img') creates a new img element 
+        //for each iteration. Each img element has its own src and can be appended 
+        //to a different boxEls element. 
+        //Outside the loop: document.createElement('img') creates only one img element. 
+        //You then set the src attribute and append the same img element to multiple boxEls, 
+        //which will overwrite the src attribute in each iteration, resulting in only the last image 
+        //being shown in all boxes.
+        
         img.src = board
         boxEls[index].appendChild(img)
     })
+
+    // images disappear 10s later
+    countDown()
+    
 }
 
-let timerInterval = setInterval(tick, 1000)
-function tick(){
-    timeleft -= 1
-    countdownEl.textContent = timeleft
-    if(timeleft === 0){
-        clearInterval(timerInterval)
-    }
+
+
+// function finalScore(){
+
+// }
+
+function countDown(){
+   let timerInterval = setInterval(tick, 1000)
+    function tick(){
+        timeleft -= 1
+        countdownEl.textContent = timeleft
+        if(timeleft === 0){
+            clearInterval(timerInterval)
+            boxEls.forEach(box => box.innerHTML = '')
+            randomImgShow()
+        }
+    } 
+}
+
+function randomImgShow(){
+    let boxIdx = Math.floor(Math.random() * 8)
+    // randomImgEl.src = boars[boxIdx]   boxEls[index].src = board is invalid because the elements in the boxEls array are DOM elements (such as div), and these elements do not have a src attribute. The src attribute is specific to img elements, used to specify the image source. The correct approach is to create an img element, set its src attribute, and then append this img element to one of the elements in the boxEls array.
+    img.src = boards[boxIdx]
+    randomImgEl.appendChild(img)
 }
 
 
