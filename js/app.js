@@ -21,16 +21,17 @@ const imagesLab = ['../images/1.jpg', '../images/2.jpg', '../images/3.jpg', '../
     '../images/61.jpg', '../images/62.jpg', '../images/63.jpg']
 
 const startBtnEl = document.getElementById('startButton')
-const gameInstruction = document.querySelector('.gameIntrocution')
+const gameInstruction = document.querySelector('#gameInstrocution')
 const imageContainerEl = document.getElementById('imagesContainer')
 const boxEls = document.querySelectorAll('.imagebox')
 const countdownEl = document.getElementById('countdown')
-const scoreEl = document.getElementById('score')
 const randomImgEl = document.getElementById('randomImg')
 
 startBtnEl.addEventListener('click', (event) => {
-    gameInstruction.style.visibility = 'hidden'
-    imageContainerEl.style.visibility = 'visible'
+    gameInstruction.style.display = 'none'
+    imageContainerEl.style.display = ''
+    countdownEl.style.display = ''
+
     init()
 })
 
@@ -40,6 +41,7 @@ function init(){
 }
 
 function resetStates() {
+    imageContainerEl.style.display = ''
     timeleft = 3
     boards = []
     boxEls.forEach(box => {
