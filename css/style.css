@@ -8,11 +8,11 @@ h1{
 
 h3{
     text-align: center;
-    font-size: 48px;
+    font-size: 48px;       
 }
 
 p {
-    font-size:larger;
+    font-size:40px;
 }
 
 #imagesContainer{   
@@ -24,11 +24,15 @@ p {
     /* width:25%; */
     width:500px;
     height: 400px;
-    aspect-ratio: 1/1;  /* what is this meaning? */
-    border: 3px solid black;
+    aspect-ratio: 1/1;  /* what does this mean? */
+    border: 3px solid black;    
     margin: 10px;
 }
 
 .randomImg {
     background-color: aquamarine;
+}
+
+#startButton {
+    font-size: 40px;
 }
