@@ -1,7 +1,7 @@
 let imageComputerChoice  
 let imagePlayerChoice 
 let boards = []
-let timeleft = 7
+let timeleft = 2
 let score = 0
 let j = 0
 let boxIdx
@@ -32,6 +32,8 @@ const boxEls = document.querySelectorAll('.imagebox')
 const countdownEl = document.getElementById('countdown')
 const randomImgEl = document.getElementById('randomImg')
 const messageEl =document.getElementById('message')
+const resultEl = document.getElementById('result')
+
 
 startBtnEl.addEventListener('click', (event) => {
     gameInstruction.style.display = 'none'
@@ -49,13 +51,13 @@ function init(){
 
 function resetStates() {
     imageContainerEl.style.display = ''
-    timeleft = 7
+    timeleft = 2
     boards = []
     messageEl.textContent = 'Memorize the position of the images'
     boxEls.forEach(box => {
         box.innerHTML = ''
-        box.removeEventListener('click', handleClick)
     })
+    resultEl.style.display = 'none'
 }
 
 function refreshImageBox(){
@@ -71,7 +73,6 @@ function refreshImageBox(){
 
         img.src = board
         boxEls[index].appendChild(img)
-        boxEls[index].addEventListener('click', handleClick)
     })
     displayCountdown()  
 }
@@ -83,7 +84,10 @@ function displayCountdown(){
     countdownEl.textContent = timeleft
     if(timeleft === 0){
         clearInterval(timerInterval)
-        boxEls.forEach(box => box.innerHTML = '')
+        boxEls.forEach(box => {
+            box.innerHTML = ''
+            box.addEventListener('click', handleClick)
+        })
         randomImgShow()
         countdownEl.innerHTML = ''
     }
@@ -109,23 +113,31 @@ function handleClick(evt){
     console.log("Selected: ", boards[clickedBoxIdx])
     if(boards[clickedBoxIdx] === imageComputerChoice){
         score += 1 
+        resultEl.style.display = ''
+        resultEl.textContent = 'Correct!'
+    } else {
+        resultEl.style.display = ''
+        resultEl.textContent = 'Nope!'
     }
     
     console.log('##### Current score:', score);
+    
+    boxEls.forEach(box => {
+        box.removeEventListener('click', handleClick)
+    })
 
     randomImgReturn()
 
-
-
     setTimeout(() => {
         j++
-        if (j < 10) {
+        if (j < 11) {
             init()
         } else {
             // exit
             imageContainerEl.style.display = 'none'
             console.log('@@@@@ Final score:', score);
-            messageEl.textContent = `You scored ${score} out of 10`   
+            messageEl.textContent = `You scored ${score} out of 10`  
+            resultEl.textContent = 'Restart' 
         }    
     }, 1200);
 }
@@ -136,3 +148,7 @@ function randomImgReturn(){
         img.src = imageComputerChoice
         boxEls[boxIdx].appendChild(img)       
 }
+
+resultEl.addEventListener('click', (event) => {
+    init()
+})
