@@ -1,7 +1,7 @@
 # Memorize the position of the images
 ![Memory Game](./images/game1.jpg) 
 ![Memory Game](./images/game2.jpg)
-![tech icon](./imges/logo.jpg)
+![tech icon](./images/logo.jpg)
 
 
 **Game Instruction**
