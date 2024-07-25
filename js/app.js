@@ -1,7 +1,7 @@
 let imageComputerChoice  
 let imagePlayerChoice 
 let boards = []
-let timeleft = 8
+let timeleft = 2
 let score = 0
 let j = 0
 let boxIdx
@@ -25,35 +25,35 @@ let boxIdx
 //     '../images/76.jpg', '../images/77.jpg', '../images/78.jpg', '../images/79.jpg', '../images/80.jpg',
 //     '../images/81.jpg', '../images/82.jpg', '../images/83.jpg', '../images/84.jpg', '../images/85.jpg',]
 
-    const imagesLab = [{src:'../images/1.jpg', alt:'Carrots'}, {src:'../images/2.jpg', alt:'Dogs'}, {src:'../images/3.jpg', alt:'Fish'},
-        {src:'../images/4.jpg', alt:'Fish'}, {src:'../images/5.jpg', alt:'fish'}, {src:'../images/6.jpg', alt:'fishes'},
-        {src:'../images/7.jpg', alt:'fish'}, {src:'../images/8.jpg', alt:'Ginger'}, {src:'../images/9.jpg', alt:'Green beans'},
-        {src:'../images/10.jpg', alt:'A white horse'}, {src:'../images/11.jpg', alt:'Color pepper'}, {src:'../images/12.jpg', alt:'Sika deer'},
-        {src:'../images/13.jpg', alt:'Tiger'}, {src:'../images/14.jpg', alt:'Tomato'}, {src:'../images/15.jpg', alt:'Turtle'},
-        {src:'../images/16.jpg', alt:'Bird'}, {src:'../images/17.jpg', alt:'Cat'}, {src:'../images/18.jpg', alt:'Dog'},
-        {src:'../images/19.jpg', alt:'Birds'}, {src:'../images/20.jpg', alt:'Penguin'}, {src:'../images/21.jpg', alt:'Monkey'},
-        {src:'../images/22.jpg', alt:'Siberian ibex'}, {src:'../images/23.jpg', alt:'Goldfishes'}, {src:'../images/24.jpg', alt:'Cats'},
-        {src:'../images/25.jpg', alt:'Rhinoceros'}, {src:'../images/26.jpg', alt:'Leopard'}, {src:'../images/27.jpg', alt:'Puppies'},
-        {src:'../images/28.jpg', alt:'Dogs'}, {src:'../images/29.jpg', alt:'Alpaca'}, {src:'../images/30.jpg', alt:'Goat'}, 
-        {src:'../images/31.jpg', alt:'Yak'}, {src:'../images/32.jpg', alt:'Birds'}, {src:'../images/33.jpg', alt:'Cat'},
-        {src:'../images/34.jpg', alt:'Rabbit'}, {src:'../images/35.jpg', alt:'Donkey'}, {src:'../images/36.jpg', alt:'Cow'},
-        {src:'../images/37.jpg', alt:'Jellyfish'}, {src:'../images/38.jpg', alt:'Birds'}, {src:'../images/39.jpg', alt:'Peacock'},
-        {src:'../images/40.jpg', alt:'Cow'}, {src:'../images/41.jpg', alt:'Sheep'}, {src:'../images/42.jpg', alt:'Dogs'},
-        {src:'../images/43.jpg', alt:'Bird'}, {src:'../images/44.jpg', alt:'Deer'}, {src:'../images/45.jpg', alt:'Leopard'},
-        {src:'../images/46.jpg', alt:'Birds'}, {src:'../images/47.jpg', alt:'Penguins'}, {src:'../images/48.jpg', alt:'Hedgehog'},
-        {src:'../images/49.jpg', alt:'Gogs'}, {src:'../images/50.jpg', alt:'Carrots'}, {src:'../images/51.jpg', alt:'Dolphin'},
-        {src:'../images/52.jpg', alt:'Turtle'}, {src:'../images/53.jpg', alt:'Crab'}, {src:'../images/54.jpg', alt:'Capybara'},
-        {src:'../images/55.jpg', alt:'Cows'}, {src:'../images/56.jpg', alt:'Horses'}, {src:'../images/57.jpg', alt:'Horses'},
-        {src:'../images/58.jpg', alt:'Birds'}, {src:'../images/59.jpg', alt:'Polar bear'}, {src:'../images/60.jpg', alt:'Ducks'}, 
-        {src:'../images/61.jpg', alt:'Dog'}, {src:'../images/62.jpg', alt:'Wolves'}, {src:'../images/63.jpg', alt:'Puffin'},
-        {src:'../images/64.jpg', alt:'Carrots'}, {src:'../images/65.jpg', alt:'Carrots'}, {src:'../images/66.jpg', alt:'Sea turtle'},
-        {src:'../images/67.jpg', alt:'Fish'}, {src:'../images/68.jpg', alt:'Starfish'}, {src:'../images/69.jpg', alt:'Fish'},
-        {src:'../images/70.jpg', alt:'Fish'}, {src:'../images/71.jpg', alt:'Fish'}, {src:'../images/72.jpg', alt:'Bird'},
-        {src:'../images/73.jpg', alt:'Flamingo'}, {src:'../images/74.jpg', alt:'Fishes'}, {src:'../images/75.jpg', alt:'Crab'},
-        {src:'../images/76.jpg', alt:'Carrots'}, {src:'../images/77.jpg', alt:'Seal'}, {src:'../images/78.jpg', alt:'Fish'},
-        {src:'../images/79.jpg', alt:'Seabird'}, {src:'../images/80.jpg', alt:'Fish'}, {src:'../images/81.jpg', alt:'Carrots'},
-        {src:'../images/82.jpg', alt:'Sea lion'}, {src:'../images/83.jpg', alt:'Dolphin'}, {src:'../images/84.jpg', alt:'Fish'},
-        {src:'../images/85.jpg', alt:'Fish'}
+    const imagesLab = [{src:'./images/1.jpg', alt:'Carrots'}, {src:'./images/2.jpg', alt:'Dogs'}, {src:'./images/3.jpg', alt:'Fish'},
+        {src:'./images/4.jpg', alt:'Fish'}, {src:'./images/5.jpg', alt:'fish'}, {src:'./images/6.jpg', alt:'fishes'},
+        {src:'./images/7.jpg', alt:'fish'}, {src:'./images/8.jpg', alt:'Ginger'}, {src:'./images/9.jpg', alt:'Green beans'},
+        {src:'./images/10.jpg', alt:'A white horse'}, {src:'./images/11.jpg', alt:'Color pepper'}, {src:'./images/12.jpg', alt:'Sika deer'},
+        {src:'./images/13.jpg', alt:'Tiger'}, {src:'./images/14.jpg', alt:'Tomato'}, {src:'./images/15.jpg', alt:'Turtle'},
+        {src:'./images/16.jpg', alt:'Bird'}, {src:'./images/17.jpg', alt:'Cat'}, {src:'./images/18.jpg', alt:'Dog'},
+        // {src:'./images/19.jpg', alt:'Birds'}, {src:'./images/20.jpg', alt:'Penguin'}, {src:'../images/21.jpg', alt:'Monkey'},
+        // {src:'./images/22.jpg', alt:'Siberian ibex'}, {src:'./images/23.jpg', alt:'Goldfishes'}, {src:'../images/24.jpg', alt:'Cats'},
+        // {src:'./images/25.jpg', alt:'Rhinoceros'}, {src:'./images/26.jpg', alt:'Leopard'}, {src:'../images/27.jpg', alt:'Puppies'},
+        // {src:'../images/28.jpg', alt:'Dogs'}, {src:'./images/29.jpg', alt:'Alpaca'}, {src:'../images/30.jpg', alt:'Goat'}, 
+        // {src:'./images/31.jpg', alt:'Yak'}, {src:'./images/32.jpg', alt:'Birds'}, {src:'../images/33.jpg', alt:'Cat'},
+        // {src:'./images/34.jpg', alt:'Rabbit'}, {src:'./images/35.jpg', alt:'Donkey'}, {src:'../images/36.jpg', alt:'Cow'},
+        // {src:'./images/37.jpg', alt:'Jellyfish'}, {src:'./images/38.jpg', alt:'Birds'}, {src:'../images/39.jpg', alt:'Peacock'},
+        // {src:'./images/40.jpg', alt:'Cow'}, {src:'./images/41.jpg', alt:'Sheep'}, {src:'../images/42.jpg', alt:'Dogs'},
+        // {src:'./images/43.jpg', alt:'Bird'}, {src:'./images/44.jpg', alt:'Deer'}, {src:'../images/45.jpg', alt:'Leopard'},
+        // {src:'./images/46.jpg', alt:'Birds'}, {src:'./images/47.jpg', alt:'Penguins'}, {src:'../images/48.jpg', alt:'Hedgehog'},
+        // {src:'./images/49.jpg', alt:'Gogs'}, {src:'./images/50.jpg', alt:'Carrots'}, {src:'../images/51.jpg', alt:'Dolphin'},
+        // {src:'./images/52.jpg', alt:'Turtle'}, {src:'./images/53.jpg', alt:'Crab'}, {src:'../images/54.jpg', alt:'Capybara'},
+        // {src:'./images/55.jpg', alt:'Cows'}, {src:'./images/56.jpg', alt:'Horses'}, {src:'../images/57.jpg', alt:'Horses'},
+        // {src:'./images/58.jpg', alt:'Birds'}, {src:'./images/59.jpg', alt:'Polar bear'}, {src:'../images/60.jpg', alt:'Ducks'}, 
+        // {src:'./images/61.jpg', alt:'Dog'}, {src:'./images/62.jpg', alt:'Wolves'}, {src:'../images/63.jpg', alt:'Puffin'},
+        // {src:'./images/64.jpg', alt:'Carrots'}, {src:'./images/65.jpg', alt:'Carrots'}, {src:'../images/66.jpg', alt:'Sea turtle'},
+        // {src:'./images/67.jpg', alt:'Fish'}, {src:'./images/68.jpg', alt:'Starfish'}, {src:'../images/69.jpg', alt:'Fish'},
+        // {src:'./images/70.jpg', alt:'Fish'}, {src:'./images/71.jpg', alt:'Fish'}, {src:'../images/72.jpg', alt:'Bird'},
+        // {src:'./images/73.jpg', alt:'Flamingo'}, {src:'../images/74.jpg', alt:'Fishes'}, {src:'../images/75.jpg', alt:'Crab'},
+        // {src:'./images/76.jpg', alt:'Carrots'}, {src:'../images/77.jpg', alt:'Seal'}, {src:'../images/78.jpg', alt:'Fish'},
+        // {src:'./images/79.jpg', alt:'Seabird'}, {src:'../images/80.jpg', alt:'Fish'}, {src:'../images/81.jpg', alt:'Carrots'},
+        // {src:'./images/82.jpg', alt:'Sea lion'}, {src:'../images/83.jpg', alt:'Dolphin'}, {src:'../images/84.jpg', alt:'Fish'},
+        // {src:'./images/85.jpg', alt:'Fish'}
     ]
 
 const startBtnEl = document.getElementById('startButton')
@@ -82,7 +82,7 @@ function init(){
 
 function resetStates() {
     imageContainerEl.style.display = ''
-    timeleft = 8
+    timeleft = 2
     boards = []
     messageEl.textContent = 'Memorize the position of the images'
     boxEls.forEach(box => {
