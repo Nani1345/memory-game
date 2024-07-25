@@ -1,5 +1,5 @@
 # Memorize the position of the images
-![Memory Game](./images/game1.jpg =300x200) 
+![Memory Game](./images/game1.jpg =300*200) 
 ![Memory Game](./images/game2.jpg)
 ![tech icon](./images/logo.jpg)
 
