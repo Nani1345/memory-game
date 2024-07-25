@@ -7,23 +7,54 @@ let j = 0
 let boxIdx
 
 
-const imagesLab = ['../images/1.jpg', '../images/2.jpg', '../images/3.jpg', '../images/4.jpg', '../images/5.jpg', 
-    '../images/6.jpg', '../images/7.jpg', '../images/8.jpg', '../images/9.jpg', '../images/10.jpg', 
-    '../images/11.jpg', '../images/12.jpg', '../images/13.jpg', '../images/14.jpg', '../images/15.jpg',
-    '../images/16.jpg', '../images/17.jpg', '../images/18.jpg', '../images/19.jpg', '../images/20.jpg',
-    '../images/21.jpg', '../images/22.jpg', '../images/23.jpg', '../images/24.jpg', '../images/25.jpg',
-    '../images/26.jpg', '../images/27.jpg', '../images/28.jpg', '../images/29.jpg', '../images/30.jpg',
-    '../images/31.jpg', '../images/32.jpg', '../images/33.jpg', '../images/34.jpg', '../images/35.jpg',
-    '../images/36.jpg', '../images/37.jpg', '../images/38.jpg', '../images/39.jpg', '../images/40.jpg',
-    '../images/41.jpg', '../images/42.jpg', '../images/43.jpg', '../images/44.jpg', '../images/45.jpg',
-    '../images/46.jpg', '../images/47.jpg', '../images/48.jpg', '../images/49.jpg', '../images/50.jpg',
-    '../images/51.jpg', '../images/52.jpg', '../images/53.jpg', '../images/54.jpg', '../images/55.jpg',
-    '../images/56.jpg', '../images/57.jpg', '../images/58.jpg', '../images/59.jpg', '../images/60.jpg',
-    '../images/61.jpg', '../images/62.jpg', '../images/63.jpg', '../images/64.jpg', '../images/65.jpg',
-    '../images/66.jpg', '../images/67.jpg', '../images/68.jpg', '../images/69.jpg', '../images/70.jpg',
-    '../images/71.jpg', '../images/72.jpg', '../images/73.jpg', '../images/74.jpg', '../images/75.jpg',
-    '../images/76.jpg', '../images/77.jpg', '../images/78.jpg', '../images/79.jpg', '../images/80.jpg',
-    '../images/81.jpg', '../images/82.jpg', '../images/83.jpg', '../images/84.jpg', '../images/85.jpg',]
+// const imagesLab = ['../images/1.jpg', '../images/2.jpg', '../images/3.jpg', '../images/4.jpg', '../images/5.jpg', 
+//     '../images/6.jpg', '../images/7.jpg', '../images/8.jpg', '../images/9.jpg', '../images/10.jpg', 
+//     '../images/11.jpg', '../images/12.jpg', '../images/13.jpg', '../images/14.jpg', '../images/15.jpg',
+//     '../images/16.jpg', '../images/17.jpg', '../images/18.jpg', '../images/19.jpg', '../images/20.jpg',
+//     '../images/21.jpg', '../images/22.jpg', '../images/23.jpg', '../images/24.jpg', '../images/25.jpg',
+//     '../images/26.jpg', '../images/27.jpg', '../images/28.jpg', '../images/29.jpg', '../images/30.jpg',
+//     '../images/31.jpg', '../images/32.jpg', '../images/33.jpg', '../images/34.jpg', '../images/35.jpg',
+//     '../images/36.jpg', '../images/37.jpg', '../images/38.jpg', '../images/39.jpg', '../images/40.jpg',
+//     '../images/41.jpg', '../images/42.jpg', '../images/43.jpg', '../images/44.jpg', '../images/45.jpg',
+//     '../images/46.jpg', '../images/47.jpg', '../images/48.jpg', '../images/49.jpg', '../images/50.jpg',
+//     '../images/51.jpg', '../images/52.jpg', '../images/53.jpg', '../images/54.jpg', '../images/55.jpg',
+//     '../images/56.jpg', '../images/57.jpg', '../images/58.jpg', '../images/59.jpg', '../images/60.jpg',
+//     '../images/61.jpg', '../images/62.jpg', '../images/63.jpg', '../images/64.jpg', '../images/65.jpg',
+//     '../images/66.jpg', '../images/67.jpg', '../images/68.jpg', '../images/69.jpg', '../images/70.jpg',
+//     '../images/71.jpg', '../images/72.jpg', '../images/73.jpg', '../images/74.jpg', '../images/75.jpg',
+//     '../images/76.jpg', '../images/77.jpg', '../images/78.jpg', '../images/79.jpg', '../images/80.jpg',
+//     '../images/81.jpg', '../images/82.jpg', '../images/83.jpg', '../images/84.jpg', '../images/85.jpg',]
+
+    const imagesLab = [{src:'../images/1.jpg', alt:'Carrots'}, {src:'../images/2.jpg', alt:'Dogs'}, {src:'../images/3.jpg', alt:'Fish'},
+        {src:'../images/4.jpg', alt:'Fish'}, {src:'../images/5.jpg', alt:'fish'}, {src:'../images/6.jpg', alt:'fishes'},
+        {src:'../images/7.jpg', alt:'fish'}, {src:'../images/8.jpg', alt:'Ginger'}, {src:'../images/9.jpg', alt:'Green beans'},
+        {src:'../images/10.jpg', alt:'A white horse'}, {src:'../images/11.jpg', alt:'Color pepper'}, {src:'../images/12.jpg', alt:'Sika deer'},
+        {src:'../images/13.jpg', alt:'Tiger'}, {src:'../images/14.jpg', alt:'Tomato'}, {src:'../images/15.jpg', alt:'Turtle'},
+        {src:'../images/16.jpg', alt:'Bird'}, {src:'../images/17.jpg', alt:'Cat'}, {src:'../images/18.jpg', alt:'Dog'},
+        {src:'../images/19.jpg', alt:'Birds'}, {src:'../images/20.jpg', alt:'Penguin'}, {src:'../images/21.jpg', alt:'Monkey'},
+        {src:'../images/22.jpg', alt:'Siberian ibex'}, {src:'../images/23.jpg', alt:'Goldfishes'}, {src:'../images/24.jpg', alt:'Cats'},
+        {src:'../images/25.jpg', alt:'Rhinoceros'}, {src:'../images/26.jpg', alt:'Leopard'}, {src:'../images/27.jpg', alt:'Puppies'},
+        {src:'../images/28.jpg', alt:'Dogs'}, {src:'../images/29.jpg', alt:'Alpaca'}, {src:'../images/30.jpg', alt:'Goat'}, 
+        {src:'../images/31.jpg', alt:'Yak'}, {src:'../images/32.jpg', alt:'Birds'}, {src:'../images/33.jpg', alt:'Cat'},
+        {src:'../images/34.jpg', alt:'Rabbit'}, {src:'../images/35.jpg', alt:'Donkey'}, {src:'../images/36.jpg', alt:'Cow'},
+        {src:'../images/37.jpg', alt:'Jellyfish'}, {src:'../images/38.jpg', alt:'Birds'}, {src:'../images/39.jpg', alt:'Peacock'},
+        {src:'../images/40.jpg', alt:'Cow'}, {src:'../images/41.jpg', alt:'Sheep'}, {src:'../images/42.jpg', alt:'Dogs'},
+        {src:'../images/43.jpg', alt:'Bird'}, {src:'../images/44.jpg', alt:'Deer'}, {src:'../images/45.jpg', alt:'Leopard'},
+        {src:'../images/46.jpg', alt:'Birds'}, {src:'../images/47.jpg', alt:'Penguins'}, {src:'../images/48.jpg', alt:'Hedgehog'},
+        {src:'../images/49.jpg', alt:'Gogs'}, {src:'../images/50.jpg', alt:'Carrots'}, {src:'../images/51.jpg', alt:'Dolphin'},
+        {src:'../images/52.jpg', alt:'Turtle'}, {src:'../images/53.jpg', alt:'Crab'}, {src:'../images/54.jpg', alt:'Capybara'},
+        {src:'../images/55.jpg', alt:'Cows'}, {src:'../images/56.jpg', alt:'Horses'}, {src:'../images/57.jpg', alt:'Horses'},
+        {src:'../images/58.jpg', alt:'Birds'}, {src:'../images/59.jpg', alt:'Polar bear'}, {src:'../images/60.jpg', alt:'Ducks'}, 
+        {src:'../images/61.jpg', alt:'Dog'}, {src:'../images/62.jpg', alt:'Wolves'}, {src:'../images/63.jpg', alt:'Puffin'},
+        {src:'../images/64.jpg', alt:'Carrots'}, {src:'../images/65.jpg', alt:'Carrots'}, {src:'../images/66.jpg', alt:'Sea turtle'},
+        {src:'../images/67.jpg', alt:'Fish'}, {src:'../images/68.jpg', alt:'Starfish'}, {src:'../images/69.jpg', alt:'Fish'},
+        {src:'../images/70.jpg', alt:'Fish'}, {src:'../images/71.jpg', alt:'Fish'}, {src:'../images/72.jpg', alt:'Bird'},
+        {src:'../images/73.jpg', alt:'Flamingo'}, {src:'../images/74.jpg', alt:'Fishes'}, {src:'../images/75.jpg', alt:'Crab'},
+        {src:'../images/76.jpg', alt:'Carrots'}, {src:'../images/77.jpg', alt:'Seal'}, {src:'../images/78.jpg', alt:'Fish'},
+        {src:'../images/79.jpg', alt:'Seabird'}, {src:'../images/80.jpg', alt:'Fish'}, {src:'../images/81.jpg', alt:'Carrots'},
+        {src:'../images/82.jpg', alt:'Sea lion'}, {src:'../images/83.jpg', alt:'Dolphin'}, {src:'../images/84.jpg', alt:'Fish'},
+        {src:'../images/85.jpg', alt:'Fish'}
+    ]
 
 const startBtnEl = document.getElementById('startButton')
 const gameInstruction = document.querySelector('#gameInstrocution')
@@ -71,8 +102,11 @@ function refreshImageBox(){
         const img = document.createElement('img')
         // //Inside the loop: document.createElement('img') creates a new img element for each iteration. Each img element has its own src and can be appended to a different boxEls element. Outside the loop: document.createElement('img') creates only one img element. You then set the src attribute and append the same img element to multiple boxEls, which will overwrite the src attribute in each iteration, resulting in only the last image being shown in all boxes.
 
-        img.src = board
+        img.src = board.src
+        img.alt = board.alt
         boxEls[index].appendChild(img)
+
+        imagesLab.push(board)
     })
     displayCountdown()  
 }
@@ -99,7 +133,8 @@ function randomImgShow(){
     // randomImgEl.src = boars[boxIdx]   boxEls[index].src = board is invalid because the elements in the boxEls array are DOM elements (such as div), and these elements do not have a src attribute. The src attribute is specific to img elements, used to specify the image source. The correct approach is to create an img element, set its src attribute, and then append this img element to one of the elements in the boxEls array. 
     imageComputerChoice = boards[boxIdx] 
     const img = document.createElement('img')
-    img.src = imageComputerChoice
+    img.src = imageComputerChoice.src
+    img.alt = imageComputerChoice.alt
     randomImgEl.appendChild(img)
 
     messageEl.textContent = 'Click the location of this image'
@@ -130,7 +165,7 @@ function handleClick(evt){
 
     setTimeout(() => {
         j++
-        if (j < 11) {
+        if (j < 10) {
             init()
         } else {
             // exit
@@ -145,10 +180,43 @@ function handleClick(evt){
 
 function randomImgReturn(){
         const img = document.createElement('img')
-        img.src = imageComputerChoice
+        img.src = imageComputerChoice.src
+        img.alt = imageComputerChoice.alt
         boxEls[boxIdx].appendChild(img)       
 }
 
 resultEl.addEventListener('click', (event) => {
+    j = 0
+    score = 0
+//    imagesLab = [{src:'../images/1.jpg', alt:'Carrots'}, {src:'../images/2.jpg', alt:'Carrots'}, {src:'../images/3.jpg', alt:'Carrots'},
+//         {src:'../images/4.jpg', alt:'Carrots'}, {src:'../images/5.jpg', alt:'Carrots'}, {src:'../images/6.jpg', alt:'Carrots'},
+//         {src:'../images/7.jpg', alt:'Carrots'}, {src:'../images/8.jpg', alt:'Carrots'}, {src:'../images/9.jpg', alt:'Carrots'},
+//         {src:'../images/10.jpg', alt:'Carrots'}, {src:'../images/11.jpg', alt:'Carrots'}, {src:'../images/12.jpg', alt:'Carrots'},
+//         {src:'../images/13.jpg', alt:'Carrots'}, {src:'../images/14.jpg', alt:'Carrots'}, {src:'../images/15.jpg', alt:'Carrots'},
+//         {src:'../images/16.jpg', alt:'Carrots'}, {src:'../images/17.jpg', alt:'Carrots'}, {src:'../images/18.jpg', alt:'Carrots'},
+//         {src:'../images/19.jpg', alt:'Carrots'}, {src:'../images/20.jpg', alt:'Carrots'}, {src:'../images/21.jpg', alt:'Carrots'},
+//         {src:'../images/22.jpg', alt:'Carrots'}, {src:'../images/23.jpg', alt:'Carrots'}, {src:'../images/24.jpg', alt:'Carrots'},
+//         {src:'../images/25.jpg', alt:'Carrots'}, {src:'../images/26.jpg', alt:'Carrots'}, {src:'../images/27.jpg', alt:'Carrots'},
+//         {src:'../images/28.jpg', alt:'Carrots'}, {src:'../images/29.jpg', alt:'Carrots'}, {src:'../images/30.jpg', alt:'Carrots'}, 
+//         {src:'../images/31.jpg', alt:'Carrots'}, {src:'../images/32.jpg', alt:'Carrots'}, {src:'../images/33.jpg', alt:'Carrots'},
+//         {src:'../images/34.jpg', alt:'Carrots'}, {src:'../images/35.jpg', alt:'Carrots'}, {src:'../images/36.jpg', alt:'Carrots'},
+//         {src:'../images/37.jpg', alt:'Carrots'}, {src:'../images/38.jpg', alt:'Carrots'}, {src:'../images/39.jpg', alt:'Carrots'},
+//         {src:'../images/40.jpg', alt:'Carrots'}, {src:'../images/41.jpg', alt:'Carrots'}, {src:'../images/42.jpg', alt:'Carrots'},
+//         {src:'../images/43.jpg', alt:'Carrots'}, {src:'../images/44.jpg', alt:'Carrots'}, {src:'../images/45.jpg', alt:'Carrots'},
+//         {src:'../images/46.jpg', alt:'Carrots'}, {src:'../images/47.jpg', alt:'Carrots'}, {src:'../images/48.jpg', alt:'Carrots'},
+//         {src:'../images/49.jpg', alt:'Carrots'}, {src:'../images/50.jpg', alt:'Carrots'}, {src:'../images/51.jpg', alt:'Carrots'},
+//         {src:'../images/52.jpg', alt:'Carrots'}, {src:'../images/53.jpg', alt:'Carrots'}, {src:'../images/54.jpg', alt:'Carrots'},
+//         {src:'../images/55.jpg', alt:'Carrots'}, {src:'../images/56.jpg', alt:'Carrots'}, {src:'../images/57.jpg', alt:'Carrots'},
+//         {src:'../images/58.jpg', alt:'Carrots'}, {src:'../images/59.jpg', alt:'Carrots'}, {src:'../images/60.jpg', alt:'Carrots'}, 
+//         {src:'../images/61.jpg', alt:'Carrots'}, {src:'../images/62.jpg', alt:'Carrots'}, {src:'../images/63.jpg', alt:'Carrots'},
+//         {src:'../images/64.jpg', alt:'Carrots'}, {src:'../images/65.jpg', alt:'Carrots'}, {src:'../images/66.jpg', alt:'Carrots'},
+//         {src:'../images/67.jpg', alt:'Carrots'}, {src:'../images/68.jpg', alt:'Carrots'}, {src:'../images/69.jpg', alt:'Carrots'},
+//         {src:'../images/70.jpg', alt:'Carrots'}, {src:'../images/71.jpg', alt:'Carrots'}, {src:'../images/72.jpg', alt:'Carrots'},
+//         {src:'../images/73.jpg', alt:'Carrots'}, {src:'../images/74.jpg', alt:'Carrots'}, {src:'../images/75.jpg', alt:'Carrots'},
+//         {src:'../images/76.jpg', alt:'Carrots'}, {src:'../images/77.jpg', alt:'Carrots'}, {src:'../images/78.jpg', alt:'Carrots'},
+//         {src:'../images/79.jpg', alt:'Carrots'}, {src:'../images/80.jpg', alt:'Carrots'}, {src:'../images/81.jpg', alt:'Carrots'},
+//         {src:'../images/82.jpg', alt:'Carrots'}, {src:'../images/83.jpg', alt:'Carrots'}, {src:'../images/84.jpg', alt:'Carrots'},
+//         {src:'../images/85.jpg', alt:'Carrots'}
+//     ]
     init()
 })
