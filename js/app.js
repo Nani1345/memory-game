@@ -1,7 +1,7 @@
 let imageComputerChoice  
 let imagePlayerChoice 
 let boards = []
-let timeleft = 2
+let timeleft = 8
 let score = 0
 let j = 0
 let boxIdx
@@ -82,7 +82,7 @@ function init(){
 
 function resetStates() {
     imageContainerEl.style.display = ''
-    timeleft = 2
+    timeleft = 8
     boards = []
     messageEl.textContent = 'Memorize the position of the images'
     boxEls.forEach(box => {
@@ -188,35 +188,5 @@ function randomImgReturn(){
 resultEl.addEventListener('click', (event) => {
     j = 0
     score = 0
-//    imagesLab = [{src:'../images/1.jpg', alt:'Carrots'}, {src:'../images/2.jpg', alt:'Carrots'}, {src:'../images/3.jpg', alt:'Carrots'},
-//         {src:'../images/4.jpg', alt:'Carrots'}, {src:'../images/5.jpg', alt:'Carrots'}, {src:'../images/6.jpg', alt:'Carrots'},
-//         {src:'../images/7.jpg', alt:'Carrots'}, {src:'../images/8.jpg', alt:'Carrots'}, {src:'../images/9.jpg', alt:'Carrots'},
-//         {src:'../images/10.jpg', alt:'Carrots'}, {src:'../images/11.jpg', alt:'Carrots'}, {src:'../images/12.jpg', alt:'Carrots'},
-//         {src:'../images/13.jpg', alt:'Carrots'}, {src:'../images/14.jpg', alt:'Carrots'}, {src:'../images/15.jpg', alt:'Carrots'},
-//         {src:'../images/16.jpg', alt:'Carrots'}, {src:'../images/17.jpg', alt:'Carrots'}, {src:'../images/18.jpg', alt:'Carrots'},
-//         {src:'../images/19.jpg', alt:'Carrots'}, {src:'../images/20.jpg', alt:'Carrots'}, {src:'../images/21.jpg', alt:'Carrots'},
-//         {src:'../images/22.jpg', alt:'Carrots'}, {src:'../images/23.jpg', alt:'Carrots'}, {src:'../images/24.jpg', alt:'Carrots'},
-//         {src:'../images/25.jpg', alt:'Carrots'}, {src:'../images/26.jpg', alt:'Carrots'}, {src:'../images/27.jpg', alt:'Carrots'},
-//         {src:'../images/28.jpg', alt:'Carrots'}, {src:'../images/29.jpg', alt:'Carrots'}, {src:'../images/30.jpg', alt:'Carrots'}, 
-//         {src:'../images/31.jpg', alt:'Carrots'}, {src:'../images/32.jpg', alt:'Carrots'}, {src:'../images/33.jpg', alt:'Carrots'},
-//         {src:'../images/34.jpg', alt:'Carrots'}, {src:'../images/35.jpg', alt:'Carrots'}, {src:'../images/36.jpg', alt:'Carrots'},
-//         {src:'../images/37.jpg', alt:'Carrots'}, {src:'../images/38.jpg', alt:'Carrots'}, {src:'../images/39.jpg', alt:'Carrots'},
-//         {src:'../images/40.jpg', alt:'Carrots'}, {src:'../images/41.jpg', alt:'Carrots'}, {src:'../images/42.jpg', alt:'Carrots'},
-//         {src:'../images/43.jpg', alt:'Carrots'}, {src:'../images/44.jpg', alt:'Carrots'}, {src:'../images/45.jpg', alt:'Carrots'},
-//         {src:'../images/46.jpg', alt:'Carrots'}, {src:'../images/47.jpg', alt:'Carrots'}, {src:'../images/48.jpg', alt:'Carrots'},
-//         {src:'../images/49.jpg', alt:'Carrots'}, {src:'../images/50.jpg', alt:'Carrots'}, {src:'../images/51.jpg', alt:'Carrots'},
-//         {src:'../images/52.jpg', alt:'Carrots'}, {src:'../images/53.jpg', alt:'Carrots'}, {src:'../images/54.jpg', alt:'Carrots'},
-//         {src:'../images/55.jpg', alt:'Carrots'}, {src:'../images/56.jpg', alt:'Carrots'}, {src:'../images/57.jpg', alt:'Carrots'},
-//         {src:'../images/58.jpg', alt:'Carrots'}, {src:'../images/59.jpg', alt:'Carrots'}, {src:'../images/60.jpg', alt:'Carrots'}, 
-//         {src:'../images/61.jpg', alt:'Carrots'}, {src:'../images/62.jpg', alt:'Carrots'}, {src:'../images/63.jpg', alt:'Carrots'},
-//         {src:'../images/64.jpg', alt:'Carrots'}, {src:'../images/65.jpg', alt:'Carrots'}, {src:'../images/66.jpg', alt:'Carrots'},
-//         {src:'../images/67.jpg', alt:'Carrots'}, {src:'../images/68.jpg', alt:'Carrots'}, {src:'../images/69.jpg', alt:'Carrots'},
-//         {src:'../images/70.jpg', alt:'Carrots'}, {src:'../images/71.jpg', alt:'Carrots'}, {src:'../images/72.jpg', alt:'Carrots'},
-//         {src:'../images/73.jpg', alt:'Carrots'}, {src:'../images/74.jpg', alt:'Carrots'}, {src:'../images/75.jpg', alt:'Carrots'},
-//         {src:'../images/76.jpg', alt:'Carrots'}, {src:'../images/77.jpg', alt:'Carrots'}, {src:'../images/78.jpg', alt:'Carrots'},
-//         {src:'../images/79.jpg', alt:'Carrots'}, {src:'../images/80.jpg', alt:'Carrots'}, {src:'../images/81.jpg', alt:'Carrots'},
-//         {src:'../images/82.jpg', alt:'Carrots'}, {src:'../images/83.jpg', alt:'Carrots'}, {src:'../images/84.jpg', alt:'Carrots'},
-//         {src:'../images/85.jpg', alt:'Carrots'}
-//     ]
     init()
 })
