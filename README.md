@@ -1,6 +1,6 @@
 # Memorize the position of the images
-<img src = './images/game1.jpg' alt = 'game screenshot' width = '400'>  
- <img src = './images/game2.jpg' alt = 'game screenshot' width = '400'>
+<img src = './images/game1.jpg' alt = 'game screenshot' width = '350'>  
+ <img src = './images/game2.jpg' alt = 'game screenshot' width = '350'>
 
 ![HTML](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
 ![JAVASCRIPT](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
