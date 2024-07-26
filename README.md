@@ -22,5 +22,10 @@
 ## Future Enhancements
 * Adding animation.
 * Add a time limit for the selection. If the player does not click any box within the limit time, the game will automatically jump to the next round.
-* Adding more game options according the difficulty of the game.
+* Adding more game options according the difficulty of the game.  
+
+## Acknowledgement
+* Pexels
+* DEV
+
 
