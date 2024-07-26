@@ -1,3 +1,5 @@
+/*---------------------------------------------------Variablies--------------------------------------------------- */
+
 let imageComputerChoice  
 let imagePlayerChoice 
 let boards = []
@@ -37,6 +39,8 @@ const imagesLab = [{src:'./images/1.jpg', alt:'Carrots'}, {src:'./images/2.jpg',
 ]
 
 
+/*---------------------------------------------Cached Element References------------------------------------------- */
+
 const startBtnEl = document.getElementById('startButton')
 const gameInstruction = document.querySelector('#gameInstrocution')
 const imageContainerEl = document.getElementById('imagesContainer')
@@ -49,13 +53,7 @@ const correctSound = new Audio("./sound/correctSound.mp3")
 const nopeSound = new Audio('./sound/NopeSound.wav')
 
 
-startBtnEl.addEventListener('click', (event) => {
-    gameInstruction.style.display = 'none'
-    imageContainerEl.style.display = ''
-    countdownEl.style.display = ''
-
-    init()
-})
+/*------------------------------------------------------Function--------------------------------------------------- */
 
 function init(){
     resetStates()
@@ -64,13 +62,13 @@ function init(){
 
 function resetStates() {
     imageContainerEl.style.display = ''
+    resultEl.style.display = 'none'
     timeleft = 2
     boards = []
     messageEl.textContent = 'Memorize the position of the images'
     boxEls.forEach(box => {
         box.innerHTML = ''
-    })
-    resultEl.style.display = 'none'
+    }) 
 }
 
 function refreshImageBox(){
@@ -83,19 +81,17 @@ function refreshImageBox(){
     boards.forEach((board,index) => {
         const img = document.createElement('img')
         // //Inside the loop: document.createElement('img') creates a new img element for each iteration. Each img element has its own src and can be appended to a different boxEls element. Outside the loop: document.createElement('img') creates only one img element. You then set the src attribute and append the same img element to multiple boxEls, which will overwrite the src attribute in each iteration, resulting in only the last image being shown in all boxes.
-
         img.src = board.src
         img.alt = board.alt
         boxEls[index].appendChild(img)
-
         imagesLab.push(board)
     })
     displayCountdown()  
 }
 
 function displayCountdown(){
-   let timerInterval = setInterval(tick, 1000)
-   function tick(){
+    let timerInterval = setInterval(tick, 1000)
+    function tick(){
     timeleft -= 1
     countdownEl.textContent = timeleft
     if(timeleft === 0){
@@ -174,6 +170,19 @@ function randomImgReturn(){
         img.alt = imageComputerChoice.alt
         boxEls[boxIdx].appendChild(img)       
 }
+
+
+
+
+/*--------------------------------------------------Event Listeners----------------------------------------------- */
+
+startBtnEl.addEventListener('click', (event) => {
+    gameInstruction.style.display = 'none'
+    imageContainerEl.style.display = ''
+    countdownEl.style.display = ''
+
+    init()
+})
 
 resultEl.addEventListener('click', (event) => {
     j = 0
