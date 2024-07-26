@@ -3,7 +3,7 @@
 let imageComputerChoice  
 let imagePlayerChoice 
 let boards = []
-let timeleft = 2
+let timeleft = 8
 let score = 0
 let j = 0
 let boxIdx
@@ -63,7 +63,7 @@ function init(){
 function resetStates() {
     imageContainerEl.style.display = ''
     resultEl.style.display = 'none'
-    timeleft = 2
+    timeleft = 8
     boards = []
     messageEl.textContent = 'Memorize the position of the images'
     boxEls.forEach(box => {
@@ -153,7 +153,7 @@ function handleClick(evt){
             console.log('@@@@@ Final score:', score);
             if(score > 7){
                 messageEl.textContent = `You scored ${score} out of 10, excellent memory 🐬`
-            } else if(score < 7 && score >5){
+            } else if(score < 8 && score >5){
                 messageEl.textContent = `You scored ${score} out of 10, good memory 🐶`
             } else {
                 messageEl.textContent = `You scored ${score} out of 10, need improvement 🐟`
@@ -170,9 +170,6 @@ function randomImgReturn(){
         img.alt = imageComputerChoice.alt
         boxEls[boxIdx].appendChild(img)       
 }
-
-
-
 
 /*--------------------------------------------------Event Listeners----------------------------------------------- */
 
