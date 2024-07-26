@@ -1,17 +1,16 @@
-# Memorize the position of the images
-<img src = './images/game1.jpg' alt = 'game screenshot' width = '450'>  
- <img src = './images/game2.jpg' alt = 'game screenshot' width = '450'>
-
-![HTML](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
-![JAVASCRIPT](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![CSS](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
-
-
-
+# Memorize the position of the images  
 ## Game Instruction
 * This game is designed to test and improve your memory and attention skills. 
 
 * Eight images will appear on the screen at the start of each round. These images will be visible for 8 seconds before disappearing After the images disappear, a single image will appear in the upper right corner of the screen. You must click the correct location where this image was initially displayed.Each correct choice earns you one point. Incorrect choices will result in zero points.
+
+<img src = './images/game1.jpg' alt = 'game screenshot' width = '450'>  
+<img src = './images/game2.jpg' alt = 'game screenshot' width = '450'>
+
+## Technologies used
+![HTML](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
+![JAVASCRIPT](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![CSS](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
 
 ## Game Time
 * [Play Game](https://nani1345.github.io/memory-game/)
