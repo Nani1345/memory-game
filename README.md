@@ -1,6 +1,6 @@
 # Memorize the position of the images
-![Memory Game](./images/game1.jpg =100x200) 
-![Memory Game](./images/game2.jpg ==100x200)
+![Memory Game](./images/game1.jpg ) 
+![Memory Game](./images/game2.jpg )
 ![HTML](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
 ![JAVASCRIPT](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![CSS](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
