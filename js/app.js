@@ -3,7 +3,7 @@
 let imageComputerChoice  
 let imagePlayerChoice 
 let boards = []
-let timeleft = 8
+let timeleft = 3
 let score = 0
 let j = 0
 let boxIdx
@@ -63,7 +63,7 @@ function init(){
 function resetStates() {
     imageContainerEl.style.display = ''
     resultEl.style.display = 'none'
-    timeleft = 8
+    timeleft = 3
     boards = []
     messageEl.textContent = 'Memorize the position of the images'
     boxEls.forEach(box => {
