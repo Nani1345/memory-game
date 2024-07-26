@@ -47,6 +47,9 @@ const countdownEl = document.getElementById('countdown')
 const randomImgEl = document.getElementById('randomImg')
 const messageEl =document.getElementById('message')
 const resultEl = document.getElementById('result')
+const correctSound = new Audio("../sound/correctSound.mp3")
+const nopeSound = new Audio('../sound/NopeSound.wav')
+console.log(nopeSound.play())
 
 
 startBtnEl.addEventListener('click', (event) => {
@@ -133,9 +136,11 @@ function handleClick(evt){
         score += 1 
         resultEl.style.display = ''
         resultEl.textContent = 'Correct!'
+        correctSound.play()
     } else {
         resultEl.style.display = ''
         resultEl.textContent = 'Nope!'
+        nopeSound.play()
     }
     
     console.log('##### Current score:', score);
@@ -154,12 +159,21 @@ function handleClick(evt){
             // exit
             imageContainerEl.style.display = 'none'
             console.log('@@@@@ Final score:', score);
-            messageEl.textContent = `You scored ${score} out of 10`  
+            if(score > 7){
+                messageEl.textContent = `You scored ${score} out of 10, 
+                🐬 excellent memory`
+            } else if(score < 7 && score >5){
+                messageEl.textContent = `You scored ${score} out of 10, 
+                🐶 gougood memory`
+            } else {
+                messageEl.textContent = `You scored ${score} out of 10, 
+                🐟 need improvement`
+            }
             resultEl.textContent = 'Restart' 
         }    
     }, 1200);
 }
-
+      
 
 function randomImgReturn(){
         const img = document.createElement('img')

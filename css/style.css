@@ -84,7 +84,7 @@ p {
     margin-top:50px;
     margin-left:auto;
     margin-right: auto;
-    background-color: rgb(199, 239, 199);
+    /* background-color: rgb(199, 239, 199); */
     padding: 50px;
 }
 
@@ -95,6 +95,7 @@ p {
     overflow: hidden;
     border-radius: 10px;
     /* background-color: rgb(199, 239, 199); */
+
 }
 
 .imagebox >img {
