@@ -47,8 +47,8 @@ const countdownEl = document.getElementById('countdown')
 const randomImgEl = document.getElementById('randomImg')
 const messageEl =document.getElementById('message')
 const resultEl = document.getElementById('result')
-const correctSound = new Audio("../sound/correctSound.mp3")
-const nopeSound = new Audio('../sound/NopeSound.wav')
+const correctSound = new Audio("./sound/correctSound.mp3")
+const nopeSound = new Audio('./sound/NopeSound.wav')
 console.log(nopeSound.play())
 
 
