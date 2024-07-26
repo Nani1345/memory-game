@@ -5,9 +5,6 @@ let timeleft = 2
 let score = 0
 let j = 0
 let boxIdx
-
-
-
 const imagesLab = [{src:'./images/1.jpg', alt:'Carrots'}, {src:'./images/2.jpg', alt:'Dogs'}, {src:'./images/3.jpg', alt:'Fish'},
     {src:'./images/4.jpg', alt:'Fish'}, {src:'./images/5.jpg', alt:'fish'}, {src:'./images/6.jpg', alt:'fishes'},
     {src:'./images/7.jpg', alt:'fish'}, {src:'./images/8.jpg', alt:'Ginger'}, {src:'./images/9.jpg', alt:'Green beans'},
@@ -39,6 +36,7 @@ const imagesLab = [{src:'./images/1.jpg', alt:'Carrots'}, {src:'./images/2.jpg',
     {src:'./images/85.jpg', alt:'Fish'}
 ]
 
+
 const startBtnEl = document.getElementById('startButton')
 const gameInstruction = document.querySelector('#gameInstrocution')
 const imageContainerEl = document.getElementById('imagesContainer')
@@ -49,7 +47,6 @@ const messageEl =document.getElementById('message')
 const resultEl = document.getElementById('result')
 const correctSound = new Audio("./sound/correctSound.mp3")
 const nopeSound = new Audio('./sound/NopeSound.wav')
-console.log(nopeSound.play())
 
 
 startBtnEl.addEventListener('click', (event) => {
@@ -61,7 +58,6 @@ startBtnEl.addEventListener('click', (event) => {
 })
 
 function init(){
-    // countdownEl.style.display = ''
     resetStates()
     refreshImageBox()
 }
@@ -160,14 +156,11 @@ function handleClick(evt){
             imageContainerEl.style.display = 'none'
             console.log('@@@@@ Final score:', score);
             if(score > 7){
-                messageEl.textContent = `You scored ${score} out of 10, 
-                🐬 excellent memory`
+                messageEl.textContent = `You scored ${score} out of 10, excellent memory 🐬`
             } else if(score < 7 && score >5){
-                messageEl.textContent = `You scored ${score} out of 10, 
-                🐶 gougood memory`
+                messageEl.textContent = `You scored ${score} out of 10, good memory 🐶`
             } else {
-                messageEl.textContent = `You scored ${score} out of 10, 
-                🐟 need improvement`
+                messageEl.textContent = `You scored ${score} out of 10, need improvement 🐟`
             }
             resultEl.textContent = 'Restart' 
         }    
