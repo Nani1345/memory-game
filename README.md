@@ -17,7 +17,7 @@
 
 ## External Resources
 * [Game Planning](https://docs.google.com/document/d/1ym-tGrkNwR1ULqoGW6tnGrUE67ou9hIsKc-pkZBpN_w/edit)
-* [Github Repo](https://github.com/Nani1345/memory-game)    
+  
 
 ## Future Enhancements
 * Adding animation.
